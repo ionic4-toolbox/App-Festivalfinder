@@ -35,9 +35,9 @@ export class FestivalsService {
  
   getFestivals() {
     return this.festivals;
-  }
+  };
 
   getFestival(id) {
     return this.festivalCollection.doc<Festival>(id).valueChanges();
-  } 
+  };
 }

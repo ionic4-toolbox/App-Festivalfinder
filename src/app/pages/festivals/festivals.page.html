@@ -1,9 +1,30 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>festivals</ion-title>
+  <ion-toolbar color="primary">
+    <ion-title>Festivals</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
+  <ion-list>
 
+    <ng-container *ngIf="!festivals || festivals.length == 0">
+      <ion-skeleton-text></ion-skeleton-text>
+      <p>
+        <ion-skeleton-text class="fake-skeleton"></ion-skeleton-text>
+        <ion-skeleton-text class="fake-skeleton"></ion-skeleton-text>
+      </p>
+    </ng-container>
+
+    <ion-item-sliding *ngFor="let festival of festivals">
+
+      <ion-item lines="inset" button [routerLink]="['/festivals', festival.id]">
+        <ion-label>
+          {{ festival.name }}
+          <p>{{ festival.startDate}} - {{ festival.endDate}}</p>
+        </ion-label>
+        <ion-note slot="end" color="primary">{{ festival.id }}</ion-note>
+      </ion-item>
+
+    </ion-item-sliding>
+  </ion-list>
 </ion-content>

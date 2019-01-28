@@ -10,7 +10,7 @@ import { AppComponent } from "./app.component";
 import { AppRoutingModule } from "./app-routing.module";
 
 import { AngularFireModule } from "angularfire2";
-import { AngularFirestoreModule } from "angularfire2/firestore";
+import { AngularFirestoreModule, FirestoreSettingsToken } from "angularfire2/firestore";
 import { environment } from "../environments/environment"
 
 @NgModule({
