@@ -9,12 +9,16 @@
       </ion-header>
       <ion-content>
         <ion-list>
-          <ion-item>
-            <ion-label>Toggle</ion-label>
-            <ion-toggle slot="end"></ion-toggle>
+          <ion-item routerLink="/">
+            <ion-menu-toggle>
+              Home
+            </ion-menu-toggle>
           </ion-item>
-          <ion-item>Menu Item</ion-item>
-          <ion-item>Menu Item</ion-item>
+          <ion-item routerLink="/festivals">
+            <ion-menu-toggle>
+              Festivals
+            </ion-menu-toggle>
+          </ion-item>
         </ion-list>
       </ion-content>
     </ion-menu>
