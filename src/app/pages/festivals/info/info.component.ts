@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
 import { ActivatedRoute } from "@angular/router";
-import { identifierModuleUrl } from '@angular/compiler';
+import { Festival, FestivalsService } from "../../../services/festivals.service";
+
 
 @Component({
   selector: 'app-info',
@@ -11,10 +12,21 @@ import { identifierModuleUrl } from '@angular/compiler';
 export class InfoComponent implements OnInit {
 
   private id: string;
-  constructor(private route: ActivatedRoute) { }
+  private festival: Festival = {
+    name: "",
+    startDate: new Date(),
+    endDate: new Date(),
+    id: "",
+  };
+  
+  constructor(private route: ActivatedRoute, private festivalsService: FestivalsService) { }
 
   ngOnInit() {
     this.id = this.route.snapshot.paramMap.get("id");
+
+    this.festivalsService.getFestival(this.id).subscribe(res => {
+      this.festival = res;
+    })
   }
 
 }

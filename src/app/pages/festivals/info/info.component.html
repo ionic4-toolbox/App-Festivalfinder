@@ -1,9 +1,22 @@
 <ion-header>
   <ion-toolbar color="primary">
-    <ion-title>Festival: {{ id }}</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>{{ festival.name }}</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
-  <ion-button>YEAH</ion-button>
+  <ion-list>
+    <ion-item>
+      {{ festival.startDate }} - {{ festival.endDate }}
+    </ion-item>
+  </ion-list>
 </ion-content>
+
+<ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button [routerLink]="'/festivals'">
+      <ion-icon name="arrow-dropleft"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
