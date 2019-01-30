@@ -1,6 +1,8 @@
 {
   "name": "festivalfinder",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular",
   "id": "61b18511"
 }

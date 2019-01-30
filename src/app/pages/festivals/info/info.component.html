@@ -12,11 +12,19 @@
     <ion-item>
       {{ festival.startDate }} - {{ festival.endDate }}
     </ion-item>
+    <ion-item>
+      <ion-button color="tertiary">
+        <ion-icon slot="icon-only" name="navigate"></ion-icon>
+      </ion-button>
+      <ion-button>
+        <ion-icon slot="icon-only" name="star"></ion-icon>
+      </ion-button>
+    </ion-item>
   </ion-list>
 </ion-content>
 
 <ion-fab vertical="bottom" horizontal="end" slot="fixed">
-    <ion-fab-button [routerLink]="'/festivals'">
-      <ion-icon name="arrow-dropleft"></ion-icon>
-    </ion-fab-button>
-  </ion-fab>
+  <ion-fab-button [routerLink]="'/festivals'">
+    <ion-icon name="arrow-dropleft"></ion-icon>
+  </ion-fab-button>
+</ion-fab>
