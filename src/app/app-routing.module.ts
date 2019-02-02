@@ -7,7 +7,7 @@ const routes: Routes = [
   { path: 'festivals', loadChildren: './pages/festivals/festivals.module#FestivalsPageModule' },
   { path: 'festivals/:id', loadChildren: './pages/festivals/festivals.module#FestivalsPageModule' },
   { path: 'bands', loadChildren: './pages/bands/bands.module#BandsPageModule' },
-  { path: 'bands/:id', loadChildren: './pages/bands/bands.module#FestivalsPageModule' },
+  { path: 'bands/:id', loadChildren: './pages/bands/bands.module#BandsPageModule' },
 
 ];
 
