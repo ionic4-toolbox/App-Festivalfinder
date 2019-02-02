@@ -1,30 +1,36 @@
 <ion-app>
   <ion-split-pane>
 
-    <ion-menu>
+    <ion-menu side="start" menuId="first">
       <ion-header>
         <ion-toolbar color="secondary">
           <ion-title>Menu</ion-title>
         </ion-toolbar>
       </ion-header>
       <ion-content>
+
         <ion-list>
-          <ion-item routerLink="/">
-            <ion-menu-toggle>
-              Home
-            </ion-menu-toggle>
+          <ion-item>
+            <ion-thumbnail slot="start">
+              <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAAAAACH5BAAAAAAALAAAAAABAAEAAAICTAEAOw==">
+            </ion-thumbnail>
+            <ion-label>
+              <h2>John Doe</h2>
+              <p>Düsseldorf, DE</p>
+            </ion-label>
+              <ion-button fill="outline" slot="end" click="close()">Edit </ion-button>
+          </ion-item>
+          <ion-item routerLink="/" menuClose>
+            Home
           </ion-item>
           <ion-item routerLink="/festivals">
-            <ion-menu-toggle>
-              Festivals
-            </ion-menu-toggle>
+            Festivals
           </ion-item>
           <ion-item routerLink="/bands">
-            <ion-menu-toggle>
-              Bands
-            </ion-menu-toggle>
+            Bands
           </ion-item>
         </ion-list>
+
       </ion-content>
     </ion-menu>
 
