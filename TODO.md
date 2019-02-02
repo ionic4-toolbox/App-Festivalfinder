@@ -17,6 +17,7 @@
 - [ ] Pre Sorting of Bands and Festivals with preferred Genres
 - [ ] If a festival has been set as favourite, the twitterfeed will be displayed on the home screen
 - [ ] Festival Calendar
+- [ ] iOS Tab Navigation {FT.0005} 
 
 ## Alpha
 
