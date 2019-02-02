@@ -1,3 +1,4 @@
+import { Band, BandsService } from "../../services/bands.service";
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BandsPage implements OnInit {
 
-  constructor() { }
+  bands: Band[];
+
+  constructor(private festivalsService: BandsService) { }
 
   ngOnInit() {
+    this.festivalsService.getBands().subscribe(res => {
+      this.bands = res;
+    })
   }
 
 }
