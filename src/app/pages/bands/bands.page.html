@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Bands</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+
+    <ng-container *ngIf="!bands || bands.length == 0">
+      <ion-skeleton-text></ion-skeleton-text>
+      <p>
+        <ion-skeleton-text class="fake-skeleton"></ion-skeleton-text>
+        <ion-skeleton-text class="fake-skeleton"></ion-skeleton-text>
+      </p>
+    </ng-container>
+
+    <ion-item-sliding *ngFor="let band of bands">
+
+      <ion-item lines="inset" button [routerLink]="['/bands', band.id]">
+        <ion-label>
+          {{ band.name }}
+        </ion-label>
+        <ion-note slot="end" color="primary">{{ band.genre }}</ion-note>
+      </ion-item>
+
+    </ion-item-sliding>
+  </ion-list>
+</ion-content>
+
+<ion-fab vertical="bottom" horizontal="end" slot="fixed">
+  <ion-fab-button>
+    <ion-icon name="search"></ion-icon>
+  </ion-fab-button>
+</ion-fab>
