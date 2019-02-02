@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { ActivatedRoute } from "@angular/router";
-import { Festival, FestivalsService } from "../../../services/bands.service";
+import { Band, BandsService } from "../../../services/bands.service";
 
 
 @Component({
