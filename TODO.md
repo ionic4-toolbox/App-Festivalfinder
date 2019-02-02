@@ -15,6 +15,7 @@
 - [ ] Draggable List to sort priority of Bands and Festivals
 - [ ] User Account with preferred Genres
 - [ ] Pre Sorting of Bands and Festivals with preferred Genres
+- [ ] If a festival has been set as favourite, the twitterfeed will be displayed on the home screen 
 
 ## Alpha
 
