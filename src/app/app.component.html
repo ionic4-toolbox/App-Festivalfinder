@@ -39,6 +39,28 @@
     </ion-split-pane>
   </div>
   <div *ngIf="platform.is('iphone') || platform.is('ipad')">
-    <ion-router-outlet main></ion-router-outlet>
+      <ion-tabs>
+        
+          <ion-tab-bar slot="bottom">
+        
+            <ion-tab-button tab="home">
+              <ion-label>Home</ion-label>
+              <ion-icon name="home"></ion-icon>
+            </ion-tab-button>
+
+            <ion-tab-button tab="festivals">
+                <ion-label>Festivals</ion-label>
+                <ion-icon name="settings"></ion-icon>
+              </ion-tab-button>
+        
+            <ion-tab-button tab="bands">
+              <ion-label>Bands</ion-label>
+              <ion-icon name="settings"></ion-icon>
+            </ion-tab-button>
+        
+          </ion-tab-bar>
+        </ion-tabs>
+
+      <ion-router-outlet main></ion-router-outlet>
   </div>
 </ion-app>
