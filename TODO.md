@@ -8,6 +8,7 @@
 - [X] Add Bands Page + Service {FT.0001}
 - [ ] Add Database Collection for Bands Page
 - [ ] Connect to Spotify API for Bands
+- [ ] Add Tab Navigation
 
 ## Alpha
 
