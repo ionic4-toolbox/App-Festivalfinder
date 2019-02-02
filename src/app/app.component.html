@@ -1,39 +1,44 @@
 <ion-app>
-  <ion-split-pane>
+  <div *ngIf="platform.is('android')">
+    <ion-split-pane>
 
-    <ion-menu side="start" menuId="first">
-      <ion-header>
-        <ion-toolbar color="secondary">
-          <ion-title>Menu</ion-title>
-        </ion-toolbar>
-      </ion-header>
-      <ion-content>
+      <ion-menu side="start" menuId="first">
+        <ion-header>
+          <ion-toolbar color="secondary">
+            <ion-title>Menu</ion-title>
+          </ion-toolbar>
+        </ion-header>
+        <ion-content>
 
-        <ion-list>
-          <ion-item>
-            <ion-thumbnail slot="start">
-              <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAAAAACH5BAAAAAAALAAAAAABAAEAAAICTAEAOw==">
-            </ion-thumbnail>
-            <ion-label>
-              <h2>John Doe</h2>
-              <p>Düsseldorf, DE</p>
-            </ion-label>
+          <ion-list>
+            <ion-item>
+              <ion-thumbnail slot="start">
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAAAAACH5BAAAAAAALAAAAAABAAEAAAICTAEAOw==">
+              </ion-thumbnail>
+              <ion-label>
+                <h2>John Doe</h2>
+                <p>Düsseldorf, DE</p>
+              </ion-label>
               <ion-button fill="outline" slot="end" click="close()">Edit </ion-button>
-          </ion-item>
-          <ion-item routerLink="/" menuClose>
-            Home
-          </ion-item>
-          <ion-item routerLink="/festivals">
-            Festivals
-          </ion-item>
-          <ion-item routerLink="/bands">
-            Bands
-          </ion-item>
-        </ion-list>
+            </ion-item>
+            <ion-item routerLink="/" menuClose>
+              Home
+            </ion-item>
+            <ion-item routerLink="/festivals">
+              Festivals
+            </ion-item>
+            <ion-item routerLink="/bands">
+              Bands
+            </ion-item>
+          </ion-list>
 
-      </ion-content>
-    </ion-menu>
+        </ion-content>
+      </ion-menu>
 
+      <ion-router-outlet main></ion-router-outlet>
+    </ion-split-pane>
+  </div>
+  <div *ngIf="platform.is('iphone') || platform.is('ipad')">
     <ion-router-outlet main></ion-router-outlet>
-  </ion-split-pane>
+  </div>
 </ion-app>
