@@ -22,9 +22,11 @@ export class UserService {
   public user: Observable<User>;
 
   constructor(private db: AngularFirestore, private afAuth: AngularFireAuth) {
-    let userId = this.afAuth.auth.currentUser.uid;
+    let userId = this.afAuth.auth.currentUser ? this.afAuth.auth.currentUser.uid : null;
 
-    this.userDoc = this.db.doc("Users/" + userId);
-    this.user = this.userDoc.valueChanges();
+    if (userId) {
+      this.userDoc = this.db.doc("Users/" + userId);
+      this.user = this.userDoc.valueChanges();
+    }
   }
 }
