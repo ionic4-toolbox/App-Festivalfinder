@@ -19,15 +19,15 @@
                 <h2>John Doe</h2>
                 <p>Düsseldorf, DE</p>
               </ion-label>
-              <ion-button fill="outline" slot="end" click="close()">Edit </ion-button>
+              <ion-button fill="outline" slot="end" (click)="close()">Edit </ion-button>
             </ion-item>
-            <ion-item routerLink="/" menuClose>
+            <ion-item routerLink="/" (click)="close()">
               Home
             </ion-item>
-            <ion-item routerLink="/festivals">
+            <ion-item routerLink="/festivals" (click)="close()">
               Festivals
             </ion-item>
-            <ion-item routerLink="/bands">
+            <ion-item routerLink="/bands" (click)="close()">
               Bands
             </ion-item>
           </ion-list>
