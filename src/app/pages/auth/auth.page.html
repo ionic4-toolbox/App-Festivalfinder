@@ -8,13 +8,14 @@
 </ion-header>
 
 <ion-content padding>
+  <h2>Development Version: Registrieren nicht möglich!</h2>
   <ion-item>
     <ion-label position="floating">Floating Label</ion-label>
-    <ion-input type="text" [(ngModel)]="user.email"></ion-input>
+    <ion-input type="text" [(ngModel)]="email"></ion-input>
   </ion-item>
   <ion-item>
     <ion-label position="floating">Floating Label</ion-label>
-    <ion-input type="password" [(ngModel)]="user.password"></ion-input>
+    <ion-input type="password" [(ngModel)]="password"></ion-input>
   </ion-item>
   <ion-button color="primary" (click)="signInWithEmailAndPassword()">Login</ion-button>
 </ion-content>
