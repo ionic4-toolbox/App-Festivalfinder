@@ -2,21 +2,18 @@ import { Injectable } from '@angular/core';
 
 import { ToastController } from '@ionic/angular';
 import { AngularFireAuth } from "angularfire2/auth";
-import { User } from "./user.service";
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
 
-  private user: User;
-
   constructor(private afAuth: AngularFireAuth,
     public toastController: ToastController) { }
 
-  async signInWithEmailAndPassword(user: User) {
+  async signInWithEmailAndPassword(email, password) {
     try {
-      const result = await this.afAuth.auth.signInWithEmailAndPassword(user.email, user.password);
+      const result = await this.afAuth.auth.signInWithEmailAndPassword(email, password);
 
       if (result) {
         const toast = await this.toastController.create({

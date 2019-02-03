@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import {User, AuthService } from "../../services/auth.service";
+import {AuthService } from "../../services/auth.service";
+import {User} from "../../services/user.service";
 
 @Component({
   selector: 'app-auth',
@@ -8,8 +9,9 @@ import {User, AuthService } from "../../services/auth.service";
   styleUrls: ['./auth.page.scss'],
 })
 export class AuthPage implements OnInit {
-
-  user: User = {email: "", password: ""};
+  
+  email: string;
+  password: string;
 
   constructor(private authService: AuthService) { }
 
@@ -17,7 +19,7 @@ export class AuthPage implements OnInit {
   }
 
   signInWithEmailAndPassword() {
-    this.authService.signInWithEmailAndPassword(this.user);
+    this.authService.signInWithEmailAndPassword(this.email, this.password);
   }
 
 }
