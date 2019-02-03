@@ -22,6 +22,7 @@ export class AuthService {
           color: "success"
         });
         toast.present();
+        return true;
       }
     } catch (error) {
       console.error(error)
@@ -31,6 +32,7 @@ export class AuthService {
         color: "danger"
       });
       toast.present();
+      return false;
     }
   }
 

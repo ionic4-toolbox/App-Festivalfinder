@@ -16,7 +16,7 @@
                 <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAAAAACH5BAAAAAAALAAAAAABAAEAAAICTAEAOw==">
               </ion-thumbnail>
               <ion-label>
-                <h2>John Doe</h2>
+                <h2>{{ userName }}</h2>
                 <p>Düsseldorf, DE</p>
               </ion-label>
               <ion-button fill="outline" slot="end" (click)="close()">Edit </ion-button>
@@ -29,6 +29,9 @@
             </ion-item>
             <ion-item routerLink="/bands" (click)="close()">
               Bands
+            </ion-item>
+            <ion-item routerLink="/auth" (click)="close()">
+              Login/Register
             </ion-item>
           </ion-list>
 
