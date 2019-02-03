@@ -10,7 +10,7 @@
 - [x] iOS Tab Navigation {FT.0005} 
 - [X] Add Database Collection for Bands Page
 - [ ] Add Users/Auth {FT.0004}
-- [ ] Navigation flow for IOS (Back button in the top bar...)
+- [ ] Navigation flow for IOS (Back button in the top bar...) {FT.0005}
 - [ ] Connect to Spotify API for Bands
 - [ ] Add Pictures to Lists and Database
 - [ ] Draggable List to sort priority of Bands and Festivals
