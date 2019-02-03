@@ -1,27 +1,64 @@
-<ion-header>
-  <ion-toolbar color="primary">
-    <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>
-    </ion-buttons>
-    <ion-title>{{ band.name }}</ion-title>
-  </ion-toolbar>
-</ion-header>
+    <ion-app>
+    <div *ngIf="platform.is('android')">
+        <ion-header>
+            <ion-toolbar color="primary">
+              <ion-buttons slot="start">
+                <ion-menu-button></ion-menu-button>
+              </ion-buttons>
+              <ion-title>{{ band.name }}</ion-title>
+            </ion-toolbar>
+          </ion-header>
+          
+          <ion-content padding>
+            <ion-list>
+              <ion-item>
+                <ion-button color="tertiary">
+                  <ion-icon slot="icon-only" name="navigate"></ion-icon>
+                </ion-button>
+                <ion-button>
+                  <ion-icon slot="icon-only" name="star"></ion-icon>
+                </ion-button>
+              </ion-item>
+            </ion-list>
+          </ion-content>
+          
+          <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+            <ion-fab-button [routerLink]="'/bands'">
+              <ion-icon name="arrow-dropleft"></ion-icon>
+            </ion-fab-button>
+          </ion-fab>
+    </div>
 
-<ion-content padding>
-  <ion-list>
-    <ion-item>
-      <ion-button color="tertiary">
-        <ion-icon slot="icon-only" name="navigate"></ion-icon>
-      </ion-button>
-      <ion-button>
-        <ion-icon slot="icon-only" name="star"></ion-icon>
-      </ion-button>
-    </ion-item>
-  </ion-list>
-</ion-content>
-
-<ion-fab vertical="bottom" horizontal="end" slot="fixed">
-  <ion-fab-button [routerLink]="'/bands'">
-    <ion-icon name="arrow-dropleft"></ion-icon>
-  </ion-fab-button>
-</ion-fab>
+    <div *ngIf="platform.is('iphone') || platform.is('ipad')">
+        <ion-header>
+            <ion-toolbar color="primary">
+              <ion-buttons slot="start">
+                <ion-menu-button></ion-menu-button>
+              </ion-buttons>
+              <ion-button routerLink="/bands">
+                <ion-icon name="arrow-back"></ion-icon>
+              </ion-button>
+              <ion-title>{{ band.name }}</ion-title>
+            </ion-toolbar>
+          </ion-header>
+          
+          <ion-content padding>
+            <ion-list>
+              <ion-item>
+                <ion-button color="tertiary">
+                  <ion-icon slot="icon-only" name="navigate"></ion-icon>
+                </ion-button>
+                <ion-button>
+                  <ion-icon slot="icon-only" name="star"></ion-icon>
+                </ion-button>
+              </ion-item>
+            </ion-list>
+          </ion-content>
+          
+          <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+            <ion-fab-button [routerLink]="'/bands'">
+              <ion-icon name="arrow-dropleft"></ion-icon>
+            </ion-fab-button>
+          </ion-fab>
+    </div>
+  </ion-app>
