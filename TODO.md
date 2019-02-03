@@ -7,9 +7,10 @@
 - [x] Add Festivals Page + Service
 - [x] Add Bands Page + Service {FT.0001}
 - [x] Add Sidebar Menu {FT.0003}
-- [ ] Add Users/Auth {FT.0004}
-- [ ] Add Tab Navigation {FT.0002}
+- [x] iOS Tab Navigation {FT.0005} 
 - [X] Add Database Collection for Bands Page
+- [ ] Add Users/Auth {FT.0004}
+- [ ] Navigation flow for IOS (Back button in the top bar...)
 - [ ] Connect to Spotify API for Bands
 - [ ] Add Pictures to Lists and Database
 - [ ] Draggable List to sort priority of Bands and Festivals
@@ -17,7 +18,6 @@
 - [ ] Pre Sorting of Bands and Festivals with preferred Genres
 - [ ] If a festival has been set as favourite, the twitterfeed will be displayed on the home screen
 - [ ] Festival Calendar
-- [ ] iOS Tab Navigation {FT.0005} 
 
 ## Alpha
 
