@@ -19,6 +19,7 @@
 - [ ] If a festival has been set as favourite, the twitterfeed will be displayed on the home screen
 - [ ] Festival Calendar
 - [ ] Edit HomePage {FT.0006}
+- [ ] Festivals which are 1 day long should have only a start date and no end date
 
 ## Alpha
 
